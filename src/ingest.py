@@ -31,8 +31,8 @@ def load_and_split():
     logger.info(f"PDF carregado: {len(documents)} páginas")
 
     splits = RecursiveCharacterTextSplitter(
-        chunk_size=1500,
-        chunk_overlap=100,
+        chunk_size=1000,
+        chunk_overlap=150,
         length_function=len,
         add_start_index=False,
         separators=["\n\n", "\n", ".", " ", ""]  # Melhor separação
